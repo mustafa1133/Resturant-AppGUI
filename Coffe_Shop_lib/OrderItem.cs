@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Coffe_Shop_lib
+namespace CoffeeShopLib
 {
     [Serializable]
     public class OrderItem
@@ -26,7 +26,7 @@ namespace Coffe_Shop_lib
         }
         public string GetInfo()
         {
-            string result = $"{menuItem.GetInfo()}";
+            string result = $"{menuItem.ToString()}";
             return result;
         }
     }

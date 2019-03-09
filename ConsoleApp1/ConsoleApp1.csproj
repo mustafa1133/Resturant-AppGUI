@@ -54,9 +54,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Coffe_Shop_lib\Coffe_Shop_lib.csproj">
+    <ProjectReference Include="..\Coffe_Shop_lib\CoffeeShopLib.csproj">
       <Project>{a30b44a2-75a1-4c8e-b4f3-27c3631f5f2d}</Project>
-      <Name>Coffe_Shop_lib</Name>
+      <Name>CoffeeShopLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

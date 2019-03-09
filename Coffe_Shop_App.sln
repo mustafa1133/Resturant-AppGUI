@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coffe_Shop_lib", "Coffe_Shop_lib\Coffe_Shop_lib.csproj", "{A30B44A2-75A1-4C8E-B4F3-27C3631F5F2D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeShopLib", "Coffe_Shop_lib\CoffeeShopLib.csproj", "{A30B44A2-75A1-4C8E-B4F3-27C3631F5F2D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{277D6EEE-68A2-4355-889E-B7E4FE132411}"
 EndProject

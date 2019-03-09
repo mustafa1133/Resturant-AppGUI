@@ -7,34 +7,30 @@
       {
         "OrderType": 0,
         "OrderTimer": "0001-01-01T00:00:00",
-        "DeliveryTime": "2019-03-05T13:08:04.4797448-05:00",
+        "DeliveryTime": "2019-03-07T16:39:51.9457157-05:00",
         "Cost": 8.25,
         "Items": [
           {
             "MenuItem": {
-              "Name": "Coffee",
               "Description": "Black coffee",
-              "BaseCost": 2.0
+              "BaseCost": 2.00
             }
           },
           {
             "MenuItem": {
-              "Name": "Coffee with sugar",
               "Description": "Coffee with singe sugar",
               "BaseCost": 2.05
             }
           },
           {
             "MenuItem": {
-              "Name": "Coffee double sugar",
-              "Description": "Coffee with two surges",
+              "Description": "Coffee with two sugars",
               "BaseCost": 2.10
             }
           },
           {
             "MenuItem": {
-              "Name": "Coffee double sugar",
-              "Description": "Coffee with two surges",
+              "Description": "Coffee with two sugars",
               "BaseCost": 2.10
             }
           },
@@ -97,21 +93,19 @@
       {
         "OrderType": 0,
         "OrderTimer": "0001-01-01T00:00:00",
-        "DeliveryTime": "2019-03-05T13:08:04.4797448-05:00",
+        "DeliveryTime": "2019-03-07T16:39:51.9457157-05:00",
         "Cost": 7.30,
         "Items": [
           {
             "MenuItem": {
-              "Name": "Coffee double double",
               "Description": "Coffee with two sugars and two milks",
-              "BaseCost": 2.30
+              "BaseCost": 2.3
             }
           },
           {
             "MenuItem": {
-              "Name": "Sendwitch with bacon",
-              "Description": "White bread sendwitch with bacon",
-              "BaseCost": 5.0
+              "Description": "White bread sandwich with bacon",
+              "BaseCost": 5.00
             }
           },
           null,
@@ -236,21 +230,19 @@
       {
         "OrderType": 0,
         "OrderTimer": "0001-01-01T00:00:00",
-        "DeliveryTime": "2019-03-05T13:08:04.5157248-05:00",
-        "Cost": 4.20,
+        "DeliveryTime": "2019-03-07T16:39:51.9856924-05:00",
+        "Cost": 4.2,
         "Items": [
           {
             "MenuItem": {
-              "Name": "Coffee with milk",
               "Description": "Coffee with one milk",
-              "BaseCost": 2.10
+              "BaseCost": 2.1
             }
           },
           {
             "MenuItem": {
-              "Name": "Coffee with milk",
               "Description": "Coffee with one milk",
-              "BaseCost": 2.10
+              "BaseCost": 2.1
             }
           },
           null,
@@ -376,26 +368,23 @@
       {
         "OrderType": 0,
         "OrderTimer": "0001-01-01T00:00:00",
-        "DeliveryTime": "2019-03-05T13:08:04.5357118-05:00",
+        "DeliveryTime": "2019-03-07T16:39:51.9986849-05:00",
         "Cost": 6.50,
         "Items": [
           {
             "MenuItem": {
-              "Name": "Coffee double milk",
               "Description": "Coffee with two milks",
-              "BaseCost": 2.20
+              "BaseCost": 2.2
             }
           },
           {
             "MenuItem": {
-              "Name": "Coffee sugar and milk ",
               "Description": "Coffee with single sugars and single milk",
               "BaseCost": 2.15
             }
           },
           {
             "MenuItem": {
-              "Name": "Coffee sugar and milk ",
               "Description": "Coffee with single sugars and single milk",
               "BaseCost": 2.15
             }
@@ -516,20 +505,19 @@
   },
   {
     "IdNumber": 1,
-    "Name": "Coffee and sendwiches",
+    "Name": "Coffee and sandwiches",
     "Phone": 0,
     "Orders": [
       {
         "OrderType": 1,
-        "OrderTimer": "2019-03-05T13:08:04.2598705-05:00",
-        "DeliveryTime": "2019-03-05T13:08:04.5576993-05:00",
-        "Cost": 5.0,
+        "OrderTimer": "2019-03-07T16:39:51.8187872-05:00",
+        "DeliveryTime": "2019-03-07T16:39:52.0166758-05:00",
+        "Cost": 5.00,
         "Items": [
           {
             "MenuItem": {
-              "Name": "Sendwitch with bacon",
-              "Description": "White bread sendwitch with bacon",
-              "BaseCost": 5.0
+              "Description": "White bread sandwich with bacon",
+              "BaseCost": 5.00
             }
           },
           null,
@@ -593,22 +581,20 @@
       },
       {
         "OrderType": 1,
-        "OrderTimer": "2019-03-05T13:08:04.3058456-05:00",
-        "DeliveryTime": "2019-03-05T13:08:04.5576993-05:00",
+        "OrderTimer": "2019-03-07T16:39:51.8417761-05:00",
+        "DeliveryTime": "2019-03-07T16:39:52.0166758-05:00",
         "Cost": 9.50,
         "Items": [
           {
             "MenuItem": {
-              "Name": "Sendwitch with roasted beef",
-              "Description": "White bread sendwitch with roasted beef",
-              "BaseCost": 5.50
+              "Description": "White bread sandwich with roasted beef",
+              "BaseCost": 5.5
             }
           },
           {
             "MenuItem": {
-              "Name": "Sendwitch with egg salad",
-              "Description": "White bread sendwitch with egg salad",
-              "BaseCost": 4.0
+              "Description": "White bread sandwich with egg salad",
+              "BaseCost": 4.00
             }
           },
           null,

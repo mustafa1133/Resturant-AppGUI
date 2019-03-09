@@ -4,20 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Coffe_Shop_lib
+namespace CoffeeShopLib
 {
     [Serializable]
     public class MenuItem
     {
-        private string name;
         private string description;
         private decimal baseCost;
 
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
         public string Description
         {
             get { return description; }
@@ -29,9 +23,8 @@ namespace Coffe_Shop_lib
             set { baseCost = value; }
         }
 
-        public MenuItem(string namei, string descriptioni, decimal baseCosti)
+        public MenuItem(string descriptioni, decimal baseCosti)
         {
-            Name = namei;
             Description = descriptioni;
             BaseCost = baseCosti;
         }
@@ -40,9 +33,9 @@ namespace Coffe_Shop_lib
 
         }
 
-        public string GetInfo()
+        public override string ToString()
         {
-            return $"==========MENU ITEM DESCRIPTION========\n  Name: {Name}\n  Details: {Description}\n  Cost:{BaseCost:C}\n";
+            return $"==========MENU ITEM DESCRIPTION========\n  Name:{Description}\n  Cost:{BaseCost:C}\n";
         }
     }
 }

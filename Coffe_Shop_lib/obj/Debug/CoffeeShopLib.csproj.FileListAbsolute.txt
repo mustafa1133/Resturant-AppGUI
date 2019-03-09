@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\Centennial\Comp123\MustafaE_301042965_A1\Coffe_Shop_lib\obj\Debug\CoffeeShopLib.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Centennial\Comp123\MustafaE_301042965_A1\Coffe_Shop_lib\obj\Debug\CoffeeShopLib.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Centennial\Comp123\MustafaE_301042965_A1\Coffe_Shop_lib\obj\Debug\Coffe_Shop_lib.dll
+C:\Users\user\Desktop\Centennial\Comp123\MustafaE_301042965_A1\Coffe_Shop_lib\obj\Debug\Coffe_Shop_lib.pdb
+C:\Users\user\Desktop\Centennial\Comp123\MustafaE_301042965_A1\Coffe_Shop_lib\bin\Debug\Coffe_Shop_lib.dll
+C:\Users\user\Desktop\Centennial\Comp123\MustafaE_301042965_A1\Coffe_Shop_lib\bin\Debug\Coffe_Shop_lib.pdb
+C:\Users\user\Desktop\Centennial\Comp123\MustafaE_301042965_A1\Coffe_Shop_lib\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\Centennial\Comp123\MustafaE_301042965_A1\Coffe_Shop_lib\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\user\Desktop\Centennial\Comp123\MustafaE_301042965_A1\Coffe_Shop_lib\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Desktop\Centennial\Comp123\MustafaE_301042965_A1\Coffe_Shop_lib\obj\Debug\CoffeeShopLib.csproj.CopyComplete

@@ -1,13 +1,13 @@
-﻿using System;
+﻿using CoffeeShopLib;
+using CoffeeShopLib.MenuItems;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Coffe_Shop_lib;
 
-namespace ConsoleApp1
+namespace CoffeeShopDemo
 {
-    
     class Program
     {
         static void Main(string[] args)
@@ -22,7 +22,7 @@ namespace ConsoleApp1
             Customer customer1;
             Customer customer2;
             Customer customer3;
-            Customer internalCustomer = new Customer("Coffee and sendwiches", 0, Address.SHOP_ADDRESS);
+            Customer internalCustomer = new Customer("Coffee and sandwiches", 0, Address.SHOP_ADDRESS);
 
             setCustomers(out customer1, out customer2, out customer3, address1, address2, address3);
 
@@ -32,10 +32,10 @@ namespace ConsoleApp1
             repository.Add(internalCustomer);
 
             titleMeessage("CUSTOMERS");
-            Console.WriteLine(customer1.GetInfo());
-            Console.WriteLine(customer2.GetInfo());
-            Console.WriteLine(customer3.GetInfo());
-            Console.WriteLine(internalCustomer.GetInfo());
+            Console.WriteLine(customer1);
+            Console.WriteLine(customer2);
+            Console.WriteLine(customer3);
+            Console.WriteLine(internalCustomer);
 
             MenuItem[] menuItems = new MenuItem[10];
 
@@ -44,7 +44,7 @@ namespace ConsoleApp1
             titleMeessage("Menu Items");
             for (int i = 0; i < menuItems.Length; i++)
             {
-                Console.WriteLine(menuItems[i].GetInfo());
+                Console.WriteLine(menuItems[i]);
             }
 
             Order order1 = customer1.CreatePhoneOrder(address1);
@@ -59,14 +59,14 @@ namespace ConsoleApp1
 
             Order order5 = new Order();
             Order order6 = new Order();
-            
 
-            
+
+
             titleMeessage("Customer with empty orders");
-            Console.WriteLine(customer1.GetInfo());
-            Console.WriteLine(customer2.GetInfo());
-            Console.WriteLine(customer3.GetInfo());
-            Console.WriteLine(internalCustomer.GetInfo());
+            Console.WriteLine(customer1);
+            Console.WriteLine(customer2);
+            Console.WriteLine(customer3);
+            Console.WriteLine(internalCustomer);
 
             //populate orders
             order1.AddOrderItem(menuItems[0]);
@@ -93,10 +93,10 @@ namespace ConsoleApp1
             internalCustomer.AddOrder(order6);
 
             titleMeessage("Customer with  non empty orders");
-            Console.WriteLine(customer1.GetInfo());
-            Console.WriteLine(customer2.GetInfo());
-            Console.WriteLine(customer3.GetInfo());
-            Console.WriteLine(internalCustomer.GetInfo());
+            Console.WriteLine(customer1);
+            Console.WriteLine(customer2);
+            Console.WriteLine(customer3);
+            Console.WriteLine(internalCustomer);
 
             //marked as delivered
             order1.Deliver();
@@ -105,10 +105,10 @@ namespace ConsoleApp1
             order4.Deliver();
 
             titleMeessage("Customer with all orders delivered");
-            Console.WriteLine(customer1.GetInfo());
-            Console.WriteLine(customer2.GetInfo());
-            Console.WriteLine(customer3.GetInfo());
-            Console.WriteLine(internalCustomer.GetInfo());
+            Console.WriteLine(customer1);
+            Console.WriteLine(customer2);
+            Console.WriteLine(customer3);
+            Console.WriteLine(internalCustomer);
 
             titleMeessage("Saving then loading and displaying content");
             repository.Save("Customers.json");
@@ -116,29 +116,24 @@ namespace ConsoleApp1
             repository.Load("Customers.json");
             foreach (Customer customer in repository.Customers)
             {
-                if (customer != null)
-                {
-                    Console.WriteLine(customer.GetInfo()); 
-                }
+                Console.WriteLine(customer);
             }
         }
 
         private static void setMenuItems(MenuItem[] menuItems)
         {
-            menuItems[0] = new MenuItem();
-            menuItems[0].Name = "Coffee";
-            menuItems[0].Description = "Black coffee";
-            menuItems[0].BaseCost = 2M;
+            menuItems[0] = new Coffee();
 
-            menuItems[1] = new MenuItem("Coffee with sugar", "Coffee with singe sugar", 2.05M);
-            menuItems[2] = new MenuItem("Coffee double sugar", "Coffee with two surges", 2.10M);
-            menuItems[3] = new MenuItem("Coffee with milk", "Coffee with one milk", 2.10M);
-            menuItems[4] = new MenuItem("Coffee double milk", "Coffee with two milks", 2.20M);
-            menuItems[5] = new MenuItem("Coffee sugar and milk ", "Coffee with single sugars and single milk", 2.15M);
-            menuItems[6] = new MenuItem("Coffee double double", "Coffee with two sugars and two milks", 2.30M);
-            menuItems[7] = new MenuItem("Sendwitch with bacon", "White bread sendwitch with bacon", 5M);
-            menuItems[8] = new MenuItem("Sendwitch with roasted beef", "White bread sendwitch with roasted beef", 5.50M);
-            menuItems[9] = new MenuItem("Sendwitch with egg salad", "White bread sendwitch with egg salad", 4M);
+
+            menuItems[1] = new CoffeeWithSugar();
+            menuItems[2] = new CoffeeDoubleSugar();
+            menuItems[3] = new CoffeeWithMilk();
+            menuItems[4] = new CoffeeDoubleMilk();
+            menuItems[5] = new CoffeeSugarAndMilk();
+            menuItems[6] = new CoffeeDoubleDouble();
+            menuItems[7] = new SandwichWithBacon();
+            menuItems[8] = new SandwichWithRoastedBeef();
+            menuItems[9] = new SandwichWithEggSalad();  
         }
 
         private static void titleMeessage(string message)
@@ -146,10 +141,10 @@ namespace ConsoleApp1
             Console.WriteLine($"--------------{message}-------------");
         }
 
-        private static void setCustomers(out Customer customer1, out Customer customer2,out Customer customer3,
+        private static void setCustomers(out Customer customer1, out Customer customer2, out Customer customer3,
                                         Address a1, Address a2, Address a3)
         {
-            customer1 = new Customer() ;
+            customer1 = new Customer();
             customer1.Address = a1;
             customer1.Name = "Jon Smith";
             customer1.Phone = 4161234567;

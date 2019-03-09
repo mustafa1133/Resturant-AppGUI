@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Coffe_Shop_lib
+namespace CoffeeShopLib
 {
     [Serializable]
     public class Order

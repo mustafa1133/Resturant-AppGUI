@@ -48,6 +48,16 @@
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerRepository.cs" />
     <Compile Include="MenuItem.cs" />
+    <Compile Include="MenuItems\SandwichWithEggSalad.cs" />
+    <Compile Include="MenuItems\SandwichWithRoastedBeef.cs" />
+    <Compile Include="MenuItems\SandwichWithBacon.cs" />
+    <Compile Include="MenuItems\CoffeeDoubleDouble.cs" />
+    <Compile Include="MenuItems\CoffeeSugarAndMilk.cs" />
+    <Compile Include="MenuItems\CoffeeDoubleMilk.cs" />
+    <Compile Include="MenuItems\CoffeeWithMilk.cs" />
+    <Compile Include="MenuItems\CoffeeDoubleSugar.cs" />
+    <Compile Include="MenuItems\CoffeeWithSugar.cs" />
+    <Compile Include="MenuItems\Coffee.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderItem.cs" />
     <Compile Include="OrderTypeEnum.cs" />

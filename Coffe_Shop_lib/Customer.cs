@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Coffe_Shop_lib
+namespace CoffeeShopLib
 {
 
     [Serializable]
@@ -89,7 +89,7 @@ namespace Coffe_Shop_lib
             numberOfIdNumber = 1;
         }
 
-        public string GetInfo()
+        public override string ToString()
         {
             string result;
 
