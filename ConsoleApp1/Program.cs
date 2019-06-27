@@ -1,4 +1,5 @@
-﻿using CoffeeShopLib;
+﻿using CoffeeShopLib.MenuItemAdditions;
+using CoffeeShopLib;
 using CoffeeShopLib.MenuItems;
 using System;
 using System.Collections.Generic;
@@ -12,8 +13,10 @@ namespace CoffeeShopDemo
     {
         static void Main(string[] args)
         {
+            #region Customers 
             CustomerRepository repository = new CustomerRepository();
             Address address1;
+
             Address address2;
             Address address3;
 
@@ -36,17 +39,19 @@ namespace CoffeeShopDemo
             Console.WriteLine(customer2);
             Console.WriteLine(customer3);
             Console.WriteLine(internalCustomer);
+            #endregion
 
-            MenuItem[] menuItems = new MenuItem[10];
+            List<MenuItem> menuItems = new List<MenuItem>();
 
             setMenuItems(menuItems);
 
             titleMeessage("Menu Items");
-            for (int i = 0; i < menuItems.Length; i++)
+            for (int i = 0; i < menuItems.Count; i++)
             {
                 Console.WriteLine(menuItems[i]);
             }
 
+            #region Orders
             Order order1 = customer1.CreatePhoneOrder(address1);
             Order order2 = customer2.CreatePhoneOrder(address2);
             Order order3 = customer3.CreatePhoneOrder(address3);
@@ -88,6 +93,7 @@ namespace CoffeeShopDemo
 
             order6.AddOrderItem(menuItems[8]);
             order6.AddOrderItem(menuItems[9]);
+            order6.AddOrderItem(menuItems[10]);
 
             internalCustomer.AddOrder(order5);
             internalCustomer.AddOrder(order6);
@@ -97,6 +103,7 @@ namespace CoffeeShopDemo
             Console.WriteLine(customer2);
             Console.WriteLine(customer3);
             Console.WriteLine(internalCustomer);
+
 
             //marked as delivered
             order1.Deliver();
@@ -110,6 +117,8 @@ namespace CoffeeShopDemo
             Console.WriteLine(customer3);
             Console.WriteLine(internalCustomer);
 
+            repository.Find();
+
             titleMeessage("Saving then loading and displaying content");
             repository.Save("Customers.json");
 
@@ -118,22 +127,22 @@ namespace CoffeeShopDemo
             {
                 Console.WriteLine(customer);
             }
+            #endregion
         }
 
-        private static void setMenuItems(MenuItem[] menuItems)
+        private static void setMenuItems(IList<MenuItem> menuItems)
         {
-            menuItems[0] = new Coffee();
-
-
-            menuItems[1] = new CoffeeWithSugar();
-            menuItems[2] = new CoffeeDoubleSugar();
-            menuItems[3] = new CoffeeWithMilk();
-            menuItems[4] = new CoffeeDoubleMilk();
-            menuItems[5] = new CoffeeSugarAndMilk();
-            menuItems[6] = new CoffeeDoubleDouble();
-            menuItems[7] = new SandwichWithBacon();
-            menuItems[8] = new SandwichWithRoastedBeef();
-            menuItems[9] = new SandwichWithEggSalad();  
+            menuItems.Add(new Suggar(new Coffee()));
+            menuItems.Add(new Suggar(new Suggar(new Coffee())));
+            menuItems.Add(new Suggar(new Milk(new Coffee())));
+            menuItems.Add(new Milk(new Coffee()));
+            menuItems.Add(new Milk(new Milk(new CoffeeDarkRoast())));
+            menuItems.Add(new Milk(new Tea()));
+            menuItems.Add(new Milk(new Milk(new Tea())));
+            menuItems.Add(new SandwichWithBacon());
+            menuItems.Add(new SandwichWithRoastedBeef());
+            menuItems.Add(new SandwichWithEggSalad());
+            menuItems.Add(new Lettuce(new SandwichWithEggSalad()));
         }
 
         private static void titleMeessage(string message)
@@ -171,5 +180,6 @@ namespace CoffeeShopDemo
             address3.Province = "ON";
             address3.PostalCode = "";
         }
+
     }
 }

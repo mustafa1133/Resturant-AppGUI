@@ -12,10 +12,5 @@ namespace CoffeeShopLib.MenuItems
         {
 
         }
-
-        //public override string ToString()
-        //{
-        //    return $"Menu Item";
-        //}
     }
 }

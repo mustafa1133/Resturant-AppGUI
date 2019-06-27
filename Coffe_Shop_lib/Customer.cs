@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,20 +10,20 @@ namespace CoffeeShopLib
 {
 
     [Serializable]
-    public class Customer
+    public class Customer 
     {
         private uint idnumber;
         private string name;
         private uint phone;
-        private Order[] orders = new Order[50];
-        private Address address;
-        private uint orderPositionInArray;
-        private const uint MAX_NUMBER_OF_ITEMS = 50;
+        private List<Order> orders;
+        public Address Address;
         private static uint numberOfIdNumber;
 
 
+ 
         public Customer(string aName, uint aTelephoneNumber,Address aAddress)
         {
+            Orders = new List<Order>();
             Name = aName;
             Phone = aTelephoneNumber;
             IdNumber = numberOfIdNumber++;
@@ -31,8 +33,17 @@ namespace CoffeeShopLib
 
         public Customer()
         {
-            Orders = new Order[MAX_NUMBER_OF_ITEMS];
-            address = new Address();
+            Orders = new List<Order>();
+            Address = new Address();
+
+            IdNumber = numberOfIdNumber++;
+        }
+
+        public Customer(Address restAddress)
+        {
+            restAddress = Address.SHOP_ADDRESS;
+
+            IdNumber = numberOfIdNumber++;
         }
 
         public uint IdNumber
@@ -51,59 +62,55 @@ namespace CoffeeShopLib
             set { phone= value; }
 
         }
-        public Order[] Orders
+        [JsonProperty]
+        public List<Order> Orders
         {
             get { return orders; }
             private set { orders = value; }
         }
-        public Address Address
-        {
-            get { return address; }
-            set { address = value; }
-        }
+
 
 
         public Order CreatePhoneOrder(Address aAddress)
         {
-            Order someOrder = new Order(aAddress);
-            if (orderPositionInArray<= Orders.Length)
-            {
-                Orders[orderPositionInArray++] = someOrder;
-            }
+            Order someOrder = new Order(aAddress) { Customer = this};
+            Orders.Add(someOrder);
+
             return someOrder;
-
-
         }
 
         public Order AddOrder(Order aOrder)
         {
-            if (orderPositionInArray <= Orders.Length)
-            {
-                Orders[orderPositionInArray++] = aOrder;
-            }
+
+            Orders.Add(aOrder);
             return aOrder;
 
         }
         static Customer()
         {
-            numberOfIdNumber = 1;
+            numberOfIdNumber = 0;
         }
 
         public override string ToString()
         {
             string result;
 
-            result = $" ==========CUSTOMER INFORMATION========\n" + $"  ID Number: {IdNumber}\n  Name: {Name}\n  Telephonenumber:{Phone}\n {Address.GetInfo()}\n";
-            foreach (Order aOrder in Orders)
+            result = $" ID Number: {IdNumber}\n  Name: {Name}\n";
+            if(Orders != null)
             {
-                if (aOrder != null)
+
+                foreach (Order aOrder in Orders)
                 {
-                    result += $"{aOrder.GetInfo()}\n";
+                    if (aOrder != null)
+                    {
+                        result += $"{aOrder.GetInfo()}\n";
+                    }
                 }
             }
             return result;
 
         }
+
     }
 }
 

@@ -16,13 +16,14 @@ namespace CoffeeShopLib
         public static Address SHOP_ADDRESS = new Address("1 King St", "Toronto", "ON", "M1M 1M1");
 
 
-        public Address(string aProvince, string aStreetName,  string aPostalCode, string aCity)
+        public Address(string aProvince, string aStreetName, string aPostalCode, string aCity)
         {
-            Street= aStreetName;
+            Street = aStreetName;
             PostalCode = aPostalCode;
             City = aCity;
             Province = aProvince;
         }
+
 
 
 

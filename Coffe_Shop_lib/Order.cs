@@ -11,16 +11,13 @@ namespace CoffeeShopLib
     public class Order
     {
         private uint orderId;
-        [JsonIgnore]
         private Customer customer;
         private DateTime orderTimer;
         private DateTime deliveryTime;
         private Address deliveryAdress;
         private decimal cost;
-        private OrderItem[] items= new OrderItem[50];
+        private List <OrderItem> items;
         private bool delivered;
-        private uint orderPositionInArray;
-        private const uint MAX_NUMBER_OF_ITEMS = 50;
         private static uint numberOfOrders;
         public OrderType OrderType;
         
@@ -28,12 +25,11 @@ namespace CoffeeShopLib
         public Order(decimal aCost, OrderType aOrderType, Address aAddress)
         {
 
-            Items = new OrderItem[MAX_NUMBER_OF_ITEMS];
+            items = new List<OrderItem>();
             orderId = numberOfOrders++;
             Cost = aCost;
             Delivered = Status();
             OrderTimer = DateTime.Now;
-            DeliveryAdress = new Address();
             this.OrderType = aOrderType;
             DeliveryAdress = aAddress;
 
@@ -42,7 +38,8 @@ namespace CoffeeShopLib
 
         public Order()
         {
-            OrderType=OrderType.Resturant;
+            items = new List<OrderItem>();
+            OrderType =OrderType.Resturant;
             OrderTimer = DateTime.Now;
             DeliveryAdress = Address.SHOP_ADDRESS;
             delivered = true;
@@ -50,6 +47,8 @@ namespace CoffeeShopLib
 
         public Order(Address aAddress)
         {
+
+            items = new List<OrderItem>();
             DeliveryAdress = aAddress;
         }
         static Order()
@@ -87,8 +86,8 @@ namespace CoffeeShopLib
             get { return cost; }
             set { cost = value; }
         }
-
-        public OrderItem[] Items
+        [JsonProperty]
+        public List<OrderItem> Items
         {
             get { return items; }
             set { items = value; }
@@ -109,18 +108,10 @@ namespace CoffeeShopLib
             get { return orderId; }
             set { orderId = value; }
         }
-        public void AddOrderItem(MenuItem aItem)
+        public void AddOrderItem(IMenuItem aItem)
         {
-            if (orderPositionInArray <= Items.Length)
-            {
-                OrderItem orderItem = new OrderItem(aItem);
-                Items[orderPositionInArray++] = orderItem;
+                Items.Add(new OrderItem(aItem));
                 Cost += aItem.BaseCost;
-            }
-            else
-            {
-                Console.WriteLine("Order Items exceed the amount of 50");
-            }
         }   
 
         public DateTime Deliver()
@@ -152,7 +143,7 @@ namespace CoffeeShopLib
             if (Status() == true)
             {
 
-                result = $"==========ORDER INFORMATION===========\n" + $"  Order ID: {orderId}\n  Order Time: {OrderTimer}\n  Delivery Time: {Deliver()}\n  Status: DELIVERED\n  DELIVERY ADRESS\n {DeliveryAdress.GetInfo()}\n  Cost: {cost:C}\n  Order Type: {OrderType}\n\n";
+                result = $"  Order ID: {orderId}\n  Order Time: {OrderTimer}\n  Delivery Time: {Deliver()}\n DELIVERY ADRESS\n {DeliveryAdress.GetInfo()}\n  Cost: {cost:C}\n  Order Type: {OrderType}\n\n";
                 foreach (OrderItem aItem in Items)
                 {
                     if (aItem != null)

@@ -1,0 +1,114 @@
+{
+  "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.Customer, Coffe_Shop_lib]], mscorlib",
+  "$values": [
+    {
+      "$type": "CoffeeShopLib.Customer, Coffe_Shop_lib",
+      "Address": {
+        "$type": "CoffeeShopLib.Address, Coffe_Shop_lib",
+        "Street": "Toronto",
+        "PostalCode": "ON",
+        "Province": "1 King St",
+        "City": "M1M 1M1"
+      },
+      "IdNumber": 1,
+      "Name": "1 King St",
+      "Phone": 0,
+      "Orders": {
+        "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.Order, Coffe_Shop_lib]], mscorlib",
+        "$values": []
+      }
+    },
+    {
+      "$type": "CoffeeShopLib.Customer, Coffe_Shop_lib",
+      "Address": {
+        "$type": "CoffeeShopLib.Address, Coffe_Shop_lib",
+        "Street": "12312",
+        "PostalCode": "121",
+        "Province": "11",
+        "City": "1"
+      },
+      "IdNumber": 2,
+      "Name": "mustafa",
+      "Phone": 123453,
+      "Orders": {
+        "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.Order, Coffe_Shop_lib]], mscorlib",
+        "$values": [
+          {
+            "$type": "CoffeeShopLib.Order, Coffe_Shop_lib",
+            "OrderType": 0,
+            "OrderTimer": "0001-01-01T00:00:00",
+            "DeliveryTime": "2019-06-26T23:42:52.2622401-04:00",
+            "Cost": 0.0,
+            "Items": {
+              "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.OrderItem, Coffe_Shop_lib]], mscorlib",
+              "$values": []
+            },
+            "DeliveryAdress": {
+              "$type": "CoffeeShopLib.Address, Coffe_Shop_lib",
+              "Street": "12312",
+              "PostalCode": "121",
+              "Province": "11",
+              "City": "1"
+            },
+            "Delivered": true,
+            "OrderId": 0
+          },
+          {
+            "$type": "CoffeeShopLib.Order, Coffe_Shop_lib",
+            "OrderType": 0,
+            "OrderTimer": "0001-01-01T00:00:00",
+            "DeliveryTime": "2019-06-26T23:42:52.2662313-04:00",
+            "Cost": 5.50,
+            "Items": {
+              "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.OrderItem, Coffe_Shop_lib]], mscorlib",
+              "$values": [
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                    "menu": {
+                      "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                      "menu": {
+                        "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                        "menu": {
+                          "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                          "menu": {
+                            "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                            "menu": {
+                              "$type": "CoffeeShopLib.MenuItems.SandwichWithBacon, Coffe_Shop_lib",
+                              "Description": "White bread sandwich with bacon",
+                              "BaseCost": 5.00
+                            },
+                            "Description": "White bread sandwich with bacon Milk",
+                            "BaseCost": 5.10
+                          },
+                          "Description": "White bread sandwich with bacon Milk Milk",
+                          "BaseCost": 5.20
+                        },
+                        "Description": "White bread sandwich with bacon Milk Milk Milk",
+                        "BaseCost": 5.30
+                      },
+                      "Description": "White bread sandwich with bacon Milk Milk Milk Milk",
+                      "BaseCost": 5.40
+                    },
+                    "Description": "White bread sandwich with bacon Milk Milk Milk Milk Milk",
+                    "BaseCost": 5.50
+                  }
+                }
+              ]
+            },
+            "DeliveryAdress": {
+              "$type": "CoffeeShopLib.Address, Coffe_Shop_lib",
+              "Street": "12312",
+              "PostalCode": "121",
+              "Province": "11",
+              "City": "1"
+            },
+            "Delivered": true,
+            "OrderId": 0
+          }
+        ]
+      }
+    }
+  ]
+}

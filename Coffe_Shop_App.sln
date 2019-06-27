@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeShopLib", "Coffe_Shop
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{277D6EEE-68A2-4355-889E-B7E4FE132411}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeShopForm", "CoffeeShopForm\CoffeeShopForm.csproj", "{1EAADF28-5A52-4921-9F7C-0DCA2EC184CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{277D6EEE-68A2-4355-889E-B7E4FE132411}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{277D6EEE-68A2-4355-889E-B7E4FE132411}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{277D6EEE-68A2-4355-889E-B7E4FE132411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EAADF28-5A52-4921-9F7C-0DCA2EC184CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EAADF28-5A52-4921-9F7C-0DCA2EC184CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EAADF28-5A52-4921-9F7C-0DCA2EC184CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EAADF28-5A52-4921-9F7C-0DCA2EC184CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

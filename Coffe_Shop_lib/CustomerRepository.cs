@@ -9,53 +9,47 @@ using Newtonsoft.Json;
 namespace CoffeeShopLib
 {
     [Serializable]
-    public class CustomerRepository
+    public class CustomerRepository : RepositoryBase
     {
-        private Customer [] customers= new Customer[10];
-        private uint positionInArray;
+
+        private List<Customer> customers;
 
 
 
-        public Customer[] Customers
+
+        public override List<Customer> Customers
         {
             get { return customers; }
+            set { customers = value; }
 
         }
-
+        public CustomerRepository()
+        {
+            customers = new List<Customer>();
+        }
+       
         public void Add(Customer aCustomer)
         {
-            if (positionInArray <= Customers.Length)
-            {
-                Customers[positionInArray++] = aCustomer;
-            }
-            else
-            {
-                Console.WriteLine("Customer amount exceeds 10");
-            }
+            
+                Customers.Add(aCustomer);
+
         }
 
-        public void Save (string filename)
+        public List<Customer> FindNotDelivered()
         {
-            FileStream fileOut = new FileStream(filename, FileMode.Create, FileAccess.Write);
-            StreamWriter writer = new StreamWriter(fileOut);
-            JsonSerializer serializer = JsonSerializer.Create(new JsonSerializerSettings { Formatting = Formatting.Indented });
-            serializer.Serialize(writer, customers);
-            writer.Close();
-            fileOut.Close();
-
+            List<Customer> aCust;
+            aCust = Customers.Where(c => c.Orders.All(orderInformation => orderInformation.Delivered== false)).ToList();
+            return aCust;
         }
 
-        public Customer[] Load (string filename)
+        public IEnumerable<Customer> BetweenTwoDateOrders(DateTime firstDate, DateTime secondDate)
         {
-            Customer[] result = null;
-            FileStream fileIn = new FileStream(filename, FileMode.Open, FileAccess.Read);
-            StreamReader reader = new StreamReader(fileIn);
-            JsonSerializer serializer= JsonSerializer.Create (new JsonSerializerSettings { Formatting = Formatting.Indented });
-            result = serializer.Deserialize(reader, typeof(Customer[])) as Customer[];
-            reader.Close();
-            fileIn.Close();
-            return result;
-        }
+            IEnumerable<Customer> customersList =
+                from cust in Customers
+                where cust.Orders.All(orderInformation => orderInformation.DeliveryTime <=secondDate && orderInformation.DeliveryTime > firstDate)
+                select cust;
+            return customersList;
 
+        }
     }
 }

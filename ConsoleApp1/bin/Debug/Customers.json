@@ -1,720 +1,403 @@
-[
-  {
-    "IdNumber": 0,
-    "Name": "Jon Smith",
-    "Phone": 4161234567,
-    "Orders": [
-      {
-        "OrderType": 0,
-        "OrderTimer": "0001-01-01T00:00:00",
-        "DeliveryTime": "2019-03-07T16:39:51.9457157-05:00",
-        "Cost": 8.25,
-        "Items": [
-          {
-            "MenuItem": {
-              "Description": "Black coffee",
-              "BaseCost": 2.00
-            }
-          },
-          {
-            "MenuItem": {
-              "Description": "Coffee with singe sugar",
-              "BaseCost": 2.05
-            }
-          },
-          {
-            "MenuItem": {
-              "Description": "Coffee with two sugars",
-              "BaseCost": 2.10
-            }
-          },
-          {
-            "MenuItem": {
-              "Description": "Coffee with two sugars",
-              "BaseCost": 2.10
-            }
-          },
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "DeliveryAdress": {
-          "Street": "35 Elm St",
-          "PostalCode": "M2M 2K5",
-          "Province": "ON",
-          "City": "Toronto"
-        },
-        "Delivered": true,
-        "OrderId": 0
+{
+  "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.Customer, Coffe_Shop_lib]], mscorlib",
+  "$values": [
+    {
+      "$type": "CoffeeShopLib.Customer, Coffe_Shop_lib",
+      "Address": {
+        "$type": "CoffeeShopLib.Address, Coffe_Shop_lib",
+        "Street": "35 Elm St",
+        "PostalCode": "M2M 2K5",
+        "Province": "ON",
+        "City": "Toronto"
       },
-      {
-        "OrderType": 0,
-        "OrderTimer": "0001-01-01T00:00:00",
-        "DeliveryTime": "2019-03-07T16:39:51.9457157-05:00",
-        "Cost": 7.30,
-        "Items": [
+      "IdNumber": 1,
+      "Name": "Jon Smith",
+      "Phone": 4161234567,
+      "Orders": {
+        "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.Order, Coffe_Shop_lib]], mscorlib",
+        "$values": [
           {
-            "MenuItem": {
-              "Description": "Coffee with two sugars and two milks",
-              "BaseCost": 2.3
-            }
+            "$type": "CoffeeShopLib.Order, Coffe_Shop_lib",
+            "OrderType": 0,
+            "OrderTimer": "0001-01-01T00:00:00",
+            "DeliveryTime": "2019-04-10T21:51:49.8069666-04:00",
+            "Cost": 8.45,
+            "Items": {
+              "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.OrderItem, Coffe_Shop_lib]], mscorlib",
+              "$values": [
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItemAdditions.Suggar, Coffe_Shop_lib",
+                    "menu": {
+                      "$type": "CoffeeShopLib.MenuItems.Coffee, Coffe_Shop_lib",
+                      "Description": "Black coffee",
+                      "BaseCost": 2.00
+                    },
+                    "Description": "Black coffee Sugar",
+                    "BaseCost": 2.05
+                  }
+                },
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItemAdditions.Suggar, Coffe_Shop_lib",
+                    "menu": {
+                      "$type": "CoffeeShopLib.MenuItemAdditions.Suggar, Coffe_Shop_lib",
+                      "menu": {
+                        "$type": "CoffeeShopLib.MenuItems.Coffee, Coffe_Shop_lib",
+                        "Description": "Black coffee",
+                        "BaseCost": 2.00
+                      },
+                      "Description": "Black coffee Sugar",
+                      "BaseCost": 2.05
+                    },
+                    "Description": "Black coffee Sugar Sugar",
+                    "BaseCost": 2.10
+                  }
+                },
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItemAdditions.Suggar, Coffe_Shop_lib",
+                    "menu": {
+                      "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                      "menu": {
+                        "$type": "CoffeeShopLib.MenuItems.Coffee, Coffe_Shop_lib",
+                        "Description": "Black coffee",
+                        "BaseCost": 2.00
+                      },
+                      "Description": "Black coffee Milk",
+                      "BaseCost": 2.10
+                    },
+                    "Description": "Black coffee Milk Sugar",
+                    "BaseCost": 2.15
+                  }
+                },
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItemAdditions.Suggar, Coffe_Shop_lib",
+                    "menu": {
+                      "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                      "menu": {
+                        "$type": "CoffeeShopLib.MenuItems.Coffee, Coffe_Shop_lib",
+                        "Description": "Black coffee",
+                        "BaseCost": 2.00
+                      },
+                      "Description": "Black coffee Milk",
+                      "BaseCost": 2.10
+                    },
+                    "Description": "Black coffee Milk Sugar",
+                    "BaseCost": 2.15
+                  }
+                }
+              ]
+            },
+            "DeliveryAdress": {
+              "$type": "CoffeeShopLib.Address, Coffe_Shop_lib",
+              "Street": "35 Elm St",
+              "PostalCode": "M2M 2K5",
+              "Province": "ON",
+              "City": "Toronto"
+            },
+            "Delivered": true,
+            "OrderId": 0
           },
           {
-            "MenuItem": {
-              "Description": "White bread sandwich with bacon",
-              "BaseCost": 5.00
-            }
-          },
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "DeliveryAdress": {
-          "Street": "35 Elm St",
-          "PostalCode": "M2M 2K5",
-          "Province": "ON",
-          "City": "Toronto"
-        },
-        "Delivered": true,
-        "OrderId": 0
+            "$type": "CoffeeShopLib.Order, Coffe_Shop_lib",
+            "OrderType": 0,
+            "OrderTimer": "0001-01-01T00:00:00",
+            "DeliveryTime": "2019-04-10T21:51:49.8079662-04:00",
+            "Cost": 7.00,
+            "Items": {
+              "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.OrderItem, Coffe_Shop_lib]], mscorlib",
+              "$values": [
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                    "menu": {
+                      "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                      "menu": {
+                        "$type": "CoffeeShopLib.MenuItems.Tea, Coffe_Shop_lib",
+                        "Description": "Tea",
+                        "BaseCost": 1.80
+                      },
+                      "Description": "Tea Milk",
+                      "BaseCost": 1.90
+                    },
+                    "Description": "Tea Milk Milk",
+                    "BaseCost": 2.00
+                  }
+                },
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItems.SandwichWithBacon, Coffe_Shop_lib",
+                    "Description": "White bread sandwich with bacon",
+                    "BaseCost": 5.00
+                  }
+                }
+              ]
+            },
+            "DeliveryAdress": {
+              "$type": "CoffeeShopLib.Address, Coffe_Shop_lib",
+              "Street": "35 Elm St",
+              "PostalCode": "M2M 2K5",
+              "Province": "ON",
+              "City": "Toronto"
+            },
+            "Delivered": true,
+            "OrderId": 0
+          }
+        ]
+      }
+    },
+    {
+      "$type": "CoffeeShopLib.Customer, Coffe_Shop_lib",
+      "Address": {
+        "$type": "CoffeeShopLib.Address, Coffe_Shop_lib",
+        "Street": "35 Queen St",
+        "PostalCode": "M2T 1M1",
+        "Province": "ON",
+        "City": "Toronto"
       },
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "Address": {
-      "Street": "35 Elm St",
-      "PostalCode": "M2M 2K5",
-      "Province": "ON",
-      "City": "Toronto"
+      "IdNumber": 2,
+      "Name": "Ann Brown",
+      "Phone": 4169876543,
+      "Orders": {
+        "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.Order, Coffe_Shop_lib]], mscorlib",
+        "$values": [
+          {
+            "$type": "CoffeeShopLib.Order, Coffe_Shop_lib",
+            "OrderType": 0,
+            "OrderTimer": "0001-01-01T00:00:00",
+            "DeliveryTime": "2019-04-10T21:51:49.8309591-04:00",
+            "Cost": 4.20,
+            "Items": {
+              "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.OrderItem, Coffe_Shop_lib]], mscorlib",
+              "$values": [
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                    "menu": {
+                      "$type": "CoffeeShopLib.MenuItems.Coffee, Coffe_Shop_lib",
+                      "Description": "Black coffee",
+                      "BaseCost": 2.00
+                    },
+                    "Description": "Black coffee Milk",
+                    "BaseCost": 2.10
+                  }
+                },
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                    "menu": {
+                      "$type": "CoffeeShopLib.MenuItems.Coffee, Coffe_Shop_lib",
+                      "Description": "Black coffee",
+                      "BaseCost": 2.00
+                    },
+                    "Description": "Black coffee Milk",
+                    "BaseCost": 2.10
+                  }
+                }
+              ]
+            },
+            "DeliveryAdress": {
+              "$type": "CoffeeShopLib.Address, Coffe_Shop_lib",
+              "Street": "35 Queen St",
+              "PostalCode": "M2T 1M1",
+              "Province": "ON",
+              "City": "Toronto"
+            },
+            "Delivered": true,
+            "OrderId": 0
+          }
+        ]
+      }
+    },
+    {
+      "$type": "CoffeeShopLib.Customer, Coffe_Shop_lib",
+      "Address": {
+        "$type": "CoffeeShopLib.Address, Coffe_Shop_lib",
+        "Street": "",
+        "PostalCode": "",
+        "Province": "ON",
+        "City": "Toronto"
+      },
+      "IdNumber": 3,
+      "Name": "John Dow",
+      "Phone": 0,
+      "Orders": {
+        "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.Order, Coffe_Shop_lib]], mscorlib",
+        "$values": [
+          {
+            "$type": "CoffeeShopLib.Order, Coffe_Shop_lib",
+            "OrderType": 0,
+            "OrderTimer": "0001-01-01T00:00:00",
+            "DeliveryTime": "2019-04-10T21:51:49.846949-04:00",
+            "Cost": 6.00,
+            "Items": {
+              "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.OrderItem, Coffe_Shop_lib]], mscorlib",
+              "$values": [
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                    "menu": {
+                      "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                      "menu": {
+                        "$type": "CoffeeShopLib.MenuItems.CoffeeDarkRoast, Coffe_Shop_lib",
+                        "Description": "Dark roast coffee",
+                        "BaseCost": 2.00
+                      },
+                      "Description": "Dark roast coffee Milk",
+                      "BaseCost": 2.10
+                    },
+                    "Description": "Dark roast coffee Milk Milk",
+                    "BaseCost": 2.20
+                  }
+                },
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                    "menu": {
+                      "$type": "CoffeeShopLib.MenuItems.Tea, Coffe_Shop_lib",
+                      "Description": "Tea",
+                      "BaseCost": 1.80
+                    },
+                    "Description": "Tea Milk",
+                    "BaseCost": 1.90
+                  }
+                },
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItemAdditions.Milk, Coffe_Shop_lib",
+                    "menu": {
+                      "$type": "CoffeeShopLib.MenuItems.Tea, Coffe_Shop_lib",
+                      "Description": "Tea",
+                      "BaseCost": 1.80
+                    },
+                    "Description": "Tea Milk",
+                    "BaseCost": 1.90
+                  }
+                }
+              ]
+            },
+            "DeliveryAdress": {
+              "$type": "CoffeeShopLib.Address, Coffe_Shop_lib",
+              "Street": "",
+              "PostalCode": "",
+              "Province": "ON",
+              "City": "Toronto"
+            },
+            "Delivered": true,
+            "OrderId": 0
+          }
+        ]
+      }
+    },
+    {
+      "$type": "CoffeeShopLib.Customer, Coffe_Shop_lib",
+      "Address": {
+        "$type": "CoffeeShopLib.Address, Coffe_Shop_lib",
+        "Street": "Toronto",
+        "PostalCode": "ON",
+        "Province": "1 King St",
+        "City": "M1M 1M1"
+      },
+      "IdNumber": 0,
+      "Name": "Coffee and sandwiches",
+      "Phone": 0,
+      "Orders": {
+        "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.Order, Coffe_Shop_lib]], mscorlib",
+        "$values": [
+          {
+            "$type": "CoffeeShopLib.Order, Coffe_Shop_lib",
+            "OrderType": 1,
+            "OrderTimer": "2019-04-10T21:51:49.599087-04:00",
+            "DeliveryTime": "2019-04-10T21:51:49.8509407-04:00",
+            "Cost": 5.00,
+            "Items": {
+              "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.OrderItem, Coffe_Shop_lib]], mscorlib",
+              "$values": [
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItems.SandwichWithBacon, Coffe_Shop_lib",
+                    "Description": "White bread sandwich with bacon",
+                    "BaseCost": 5.00
+                  }
+                }
+              ]
+            },
+            "DeliveryAdress": {
+              "$type": "CoffeeShopLib.Address, Coffe_Shop_lib",
+              "Street": "Toronto",
+              "PostalCode": "ON",
+              "Province": "1 King St",
+              "City": "M1M 1M1"
+            },
+            "Delivered": true,
+            "OrderId": 0
+          },
+          {
+            "$type": "CoffeeShopLib.Order, Coffe_Shop_lib",
+            "OrderType": 1,
+            "OrderTimer": "2019-04-10T21:51:49.6400619-04:00",
+            "DeliveryTime": "2019-04-10T21:51:49.8519399-04:00",
+            "Cost": 13.80,
+            "Items": {
+              "$type": "System.Collections.Generic.List`1[[CoffeeShopLib.OrderItem, Coffe_Shop_lib]], mscorlib",
+              "$values": [
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItems.SandwichWithRoastedBeef, Coffe_Shop_lib",
+                    "Description": "White bread sandwich with roasted beef",
+                    "BaseCost": 5.5
+                  }
+                },
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItems.SandwichWithEggSalad, Coffe_Shop_lib",
+                    "Description": "White bread sandwich with egg salad",
+                    "BaseCost": 4.00
+                  }
+                },
+                {
+                  "$type": "CoffeeShopLib.OrderItem, Coffe_Shop_lib",
+                  "MenuItem": {
+                    "$type": "CoffeeShopLib.MenuItemAdditions.Lettuce, Coffe_Shop_lib",
+                    "menu": {
+                      "$type": "CoffeeShopLib.MenuItems.SandwichWithEggSalad, Coffe_Shop_lib",
+                      "Description": "White bread sandwich with egg salad",
+                      "BaseCost": 4.00
+                    },
+                    "Description": "White bread sandwich with egg salad Lettuce",
+                    "BaseCost": 4.30
+                  }
+                }
+              ]
+            },
+            "DeliveryAdress": {
+              "$type": "CoffeeShopLib.Address, Coffe_Shop_lib",
+              "Street": "Toronto",
+              "PostalCode": "ON",
+              "Province": "1 King St",
+              "City": "M1M 1M1"
+            },
+            "Delivered": true,
+            "OrderId": 0
+          }
+        ]
+      }
     }
-  },
-  {
-    "IdNumber": 2,
-    "Name": "Ann Brown",
-    "Phone": 4169876543,
-    "Orders": [
-      {
-        "OrderType": 0,
-        "OrderTimer": "0001-01-01T00:00:00",
-        "DeliveryTime": "2019-03-07T16:39:51.9856924-05:00",
-        "Cost": 4.2,
-        "Items": [
-          {
-            "MenuItem": {
-              "Description": "Coffee with one milk",
-              "BaseCost": 2.1
-            }
-          },
-          {
-            "MenuItem": {
-              "Description": "Coffee with one milk",
-              "BaseCost": 2.1
-            }
-          },
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "DeliveryAdress": {
-          "Street": "35 Queen St",
-          "PostalCode": "M2T 1M1",
-          "Province": "ON",
-          "City": "Toronto"
-        },
-        "Delivered": true,
-        "OrderId": 0
-      },
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "Address": {
-      "Street": "35 Queen St",
-      "PostalCode": "M2T 1M1",
-      "Province": "ON",
-      "City": "Toronto"
-    }
-  },
-  {
-    "IdNumber": 3,
-    "Name": "John Dow",
-    "Phone": 0,
-    "Orders": [
-      {
-        "OrderType": 0,
-        "OrderTimer": "0001-01-01T00:00:00",
-        "DeliveryTime": "2019-03-07T16:39:51.9986849-05:00",
-        "Cost": 6.50,
-        "Items": [
-          {
-            "MenuItem": {
-              "Description": "Coffee with two milks",
-              "BaseCost": 2.2
-            }
-          },
-          {
-            "MenuItem": {
-              "Description": "Coffee with single sugars and single milk",
-              "BaseCost": 2.15
-            }
-          },
-          {
-            "MenuItem": {
-              "Description": "Coffee with single sugars and single milk",
-              "BaseCost": 2.15
-            }
-          },
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "DeliveryAdress": {
-          "Street": "",
-          "PostalCode": "",
-          "Province": "ON",
-          "City": "Toronto"
-        },
-        "Delivered": true,
-        "OrderId": 0
-      },
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "Address": {
-      "Street": "",
-      "PostalCode": "",
-      "Province": "ON",
-      "City": "Toronto"
-    }
-  },
-  {
-    "IdNumber": 1,
-    "Name": "Coffee and sandwiches",
-    "Phone": 0,
-    "Orders": [
-      {
-        "OrderType": 1,
-        "OrderTimer": "2019-03-07T16:39:51.8187872-05:00",
-        "DeliveryTime": "2019-03-07T16:39:52.0166758-05:00",
-        "Cost": 5.00,
-        "Items": [
-          {
-            "MenuItem": {
-              "Description": "White bread sandwich with bacon",
-              "BaseCost": 5.00
-            }
-          },
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "DeliveryAdress": {
-          "Street": "Toronto",
-          "PostalCode": "ON",
-          "Province": "1 King St",
-          "City": "M1M 1M1"
-        },
-        "Delivered": true,
-        "OrderId": 0
-      },
-      {
-        "OrderType": 1,
-        "OrderTimer": "2019-03-07T16:39:51.8417761-05:00",
-        "DeliveryTime": "2019-03-07T16:39:52.0166758-05:00",
-        "Cost": 9.50,
-        "Items": [
-          {
-            "MenuItem": {
-              "Description": "White bread sandwich with roasted beef",
-              "BaseCost": 5.5
-            }
-          },
-          {
-            "MenuItem": {
-              "Description": "White bread sandwich with egg salad",
-              "BaseCost": 4.00
-            }
-          },
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "DeliveryAdress": {
-          "Street": "Toronto",
-          "PostalCode": "ON",
-          "Province": "1 King St",
-          "City": "M1M 1M1"
-        },
-        "Delivered": true,
-        "OrderId": 0
-      },
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "Address": {
-      "Street": "Toronto",
-      "PostalCode": "ON",
-      "Province": "1 King St",
-      "City": "M1M 1M1"
-    }
-  },
-  null,
-  null,
-  null,
-  null,
-  null,
-  null
-]
+  ]
+}

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,17 +10,15 @@ namespace CoffeeShopLib
     [Serializable]
     public class OrderItem
     {
-        private MenuItem menuItem = new MenuItem();
+        private IMenuItem menuItem;
 
-
-
-        public MenuItem MenuItem
+        public IMenuItem MenuItem
         {
             get { return menuItem; }
             set { menuItem = value; }
         }
 
-        public OrderItem(MenuItem menuItemi)
+        public OrderItem(IMenuItem menuItemi)
         {
             MenuItem = menuItemi;
 
